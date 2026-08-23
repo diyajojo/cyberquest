@@ -2,15 +2,13 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center p-8 sm:p-20 font-sans text-white">
-      {/* Background Image - Covers full width, anchored to top */}
-      <div className="fixed inset-0 z-[-1] bg-black">
-        <Image
+    <div className="relative min-h-screen flex flex-col items-center justify-center p-8 sm:p-20 font-sans text-white bg-black z-0">
+      {/* Background Image - Absolute positioned to scroll with the page, covers full width */}
+      <div className="absolute top-0 left-0 w-full z-[-1]">
+        <img
           src="/background.png"
           alt="Background"
-          fill
-          priority
-          className="object-cover object-top" 
+          className="w-full h-auto" 
         />
       </div>
 
