@@ -5,8 +5,15 @@ export default function Home() {
     <div className="relative min-h-screen font-sans text-white bg-black z-0 overflow-x-hidden">
       {/* ── Fixed CSS Gradient Background ── */}
       <div className="fixed inset-0 z-[-1] bg-black">
-        {/* Core radial glow behind the hero/text */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,_#0a2e10_0%,_#000000_70%)]"></div>
+        {/* Wide primary glow — spreads green across the full width */}
+        <div className="absolute inset-0" style={{
+          background: "radial-gradient(ellipse 120% 60% at 50% 35%, #0d3d18 0%, #051a0a 55%, #000000 100%)"
+        }}></div>
+
+        {/* Secondary edge bleed — soft green tint on sides */}
+        <div className="absolute inset-0" style={{
+          background: "radial-gradient(ellipse 80% 40% at 15% 50%, rgba(10,46,16,0.5) 0%, transparent 70%), radial-gradient(ellipse 80% 40% at 85% 50%, rgba(10,46,16,0.5) 0%, transparent 70%)"
+        }}></div>
         
         {/* Subtle tech grid pattern to keep the cyber feel */}
         <div 
