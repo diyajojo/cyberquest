@@ -42,7 +42,7 @@ export default function Home() {
 
               {/* CYBERQUEST text */}
               <h1
-                className="font-bebas-neue select-none uppercase tracking-tighter leading-none text-center -mt-2"
+                className="font-bebas-neue select-none uppercase tracking-[0.05em] sm:tracking-[0.08em] leading-none text-center -mt-2"
                 style={{
                   fontSize: "clamp(4.5rem, 15vw, 14rem)",
                   background: "linear-gradient(180deg, #E8FFEA 0%, #77BC79 47%, #102F10 83%)",
