@@ -34,7 +34,7 @@ export default function Home() {
             <div className="absolute top-[2%] left-0 right-0 flex flex-col items-center justify-center pointer-events-none z-0">
               {/* "EXCEL MEC PRESENTS" — sits right above CYBERQUEST */}
               <p
-                className="tracking-[0.35em] text-xs sm:text-sm font-mono font-bold uppercase mb-0 relative z-30"
+                className="font-roboto-slab tracking-[0.35em] text-xs sm:text-sm font-bold uppercase mb-0 relative z-30"
                 style={{ color: "#b0c8b0" }}
               >
                 Excel MEC Presents
@@ -42,7 +42,7 @@ export default function Home() {
 
               {/* CYBERQUEST text */}
               <h1
-                className="select-none font-black uppercase tracking-tighter leading-none text-center -mt-2"
+                className="font-bebas-neue select-none uppercase tracking-tighter leading-none text-center -mt-2"
                 style={{
                   fontSize: "clamp(4.5rem, 15vw, 14rem)",
                   background: "linear-gradient(180deg, #E8FFEA 0%, #77BC79 47%, #102F10 83%)",
