@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative z-10 flex flex-col items-center w-full min-h-screen min-h-[100dvh]">
+    <section id="hero" className="relative z-10 flex flex-col items-center w-full min-h-screen min-h-[100dvh]">
       {/* Container that holds everything stacked and centered */}
       <div className="relative flex flex-col items-center justify-center w-full flex-1 pt-4 sm:pt-10">
 
@@ -137,6 +137,23 @@ export default function Hero() {
           </div>
 
         </div>
+      </div>
+
+      {/* ── Scroll Indicator ── */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce z-20">
+        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#6FEF44]/70">Scroll</span>
+        <svg
+          className="w-5 h-5 text-[#6FEF44]"
+          style={{ filter: "drop-shadow(0 0 6px #6FEF44)" }}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
       </div>
     </section>
   );

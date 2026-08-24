@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import EventInfo from "@/components/EventInfo";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_transparent_40%,_#000000_100%)]"></div>
       </div>
 
+      <Navbar />
       <Hero />
       <About />
       <EventInfo />

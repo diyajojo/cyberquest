@@ -2,7 +2,7 @@ export default function EventInfo() {
   return (
     <>
       {/* ── Event Details Section ── */}
-      <section className="relative z-10 flex flex-col items-center w-full px-4 py-8 pb-24">
+      <section id="event-info" className="relative z-10 flex flex-col items-center w-full px-4 py-8 pb-24">
         <div className="relative w-full max-w-5xl p-[1px]">
           {/* Outer glowing border shape */}
           <div 
@@ -128,7 +128,7 @@ export default function EventInfo() {
       </section>
 
       {/* ── Event Coordinators Section ── */}
-      <section className="relative z-10 flex flex-col items-center w-full px-4 py-8 pb-32">
+      <section id="coordinators" className="relative z-10 flex flex-col items-center w-full px-4 py-8 pb-32">
         <h3 className="text-[#6FEF44] font-mono uppercase tracking-[0.2em] text-xl sm:text-2xl mb-8">Event Coordinators</h3>
         
         <div className="relative w-full max-w-4xl p-[1px]">

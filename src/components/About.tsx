@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="relative z-10 flex flex-col items-center w-full px-4 py-16">
+    <section id="about" className="relative z-10 flex flex-col items-center w-full px-4 py-16">
       <div className="w-full max-w-6xl rounded-3xl border border-[#1b3d18] bg-[#030904]/80 p-8 sm:p-12 backdrop-blur-sm shadow-[0_0_30px_rgba(27,61,24,0.3)]">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-16">
           
