@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -11,7 +12,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 40);
 
       // Determine active section based on scroll position
-      const sections = ["hero", "about", "event-info", "coordinators"];
+      const sections = ["hero", "about", "event-info"];
       for (const id of sections.reverse()) {
         const el = document.getElementById(id);
         if (el && window.scrollY >= el.offsetTop - 120) {
@@ -32,8 +33,7 @@ export default function Navbar() {
   const navLinks = [
     { id: "hero", label: "Home" },
     { id: "about", label: "About" },
-    { id: "event-info", label: "Event Details" },
-    { id: "coordinators", label: "Coordinators" },
+    { id: "event-info", label: "Event Info & Coordinators" },
   ];
 
   return (
@@ -44,57 +44,37 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-        {/* Logo */}
+      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+        
+        {/* Logo Image (Left side) */}
         <button
           onClick={() => scrollTo("hero")}
-          className="font-bebas-neue text-xl tracking-[0.15em] uppercase cursor-pointer"
-          style={{
-            background: "linear-gradient(180deg, #E8FFEA 0%, #6FEF44 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-          }}
+          className="relative cursor-pointer w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center transition-transform hover:scale-105"
         >
-          Cyber<span className="text-[#6FEF44]">Quest</span>
+          <Image 
+            src="/logo.png" 
+            alt="Logo" 
+            fill
+            className="object-contain"
+            unoptimized
+          />
         </button>
 
-        {/* Nav Links */}
-        <ul className="hidden sm:flex items-center gap-8">
-          {navLinks.map(({ id, label }) => (
-            <li key={id}>
-              <button
-                onClick={() => scrollTo(id)}
-                className={`font-mono text-xs uppercase tracking-[0.2em] transition-all duration-300 cursor-pointer relative pb-1 ${
-                  activeSection === id
-                    ? "text-[#6FEF44]"
-                    : "text-white/50 hover:text-white/90"
-                }`}
-              >
-                {label}
-                {/* Active underline */}
-                {activeSection === id && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[1px] bg-[#6FEF44] shadow-[0_0_6px_#6FEF44]" />
-                )}
-              </button>
-            </li>
-          ))}
-        </ul>
-
-        {/* Mobile menu — dots indicator */}
-        <div className="flex sm:hidden items-center gap-1.5">
+        {/* Navigation dots (Right side) */}
+        <div className="flex items-center gap-3">
           {navLinks.map(({ id }) => (
             <button
               key={id}
               onClick={() => scrollTo(id)}
-              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+              className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                 activeSection === id
-                  ? "bg-[#6FEF44] shadow-[0_0_6px_#6FEF44] scale-125"
-                  : "bg-white/30"
+                  ? "bg-[#6FEF44] shadow-[0_0_8px_#6FEF44] scale-125"
+                  : "bg-white/30 hover:bg-white/50"
               }`}
             />
           ))}
         </div>
+
       </div>
     </nav>
   );
