@@ -12,6 +12,7 @@
   --font-mono: var(--font-geist-mono);
   --font-roboto-slab: var(--font-roboto-slab);
   --font-bebas-neue: var(--font-bebas-neue);
+  --font-josefin-sans: var(--font-josefin-sans);
 }
 
 @media (prefers-color-scheme: dark) {
